@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mos Eisley Cantina</title>
+    <!--This links the normalize stylesheet taken from github.com/necolas/normalize.css-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--This links our actual CSS properties-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header id="pg-banner">
+        <h1 id="logo">Mos Eisley Cantina</h1>
+        <nav id="primary-nav">
+			<a href="index.html">Home</a>
+			<a href="menu.html">Menu</a>
+			<a href="mos-eisley.html">Mos Eisley</a>
+            <a href="contact.html">Contact Us</a>
+		</nav>
+    </header>
+    <main id="pg-main-content">
+        <h2>Contact Us</h2>
+        <h3>Location:</h3>
+        <p>Great Mesra Plateau north of the Anchorhead, Tatooine</p>
+        <h3>Timings:</h3>
+        <p>Open from 8 am to 12 am everyday&#33;</p>
+        <h3>To Apply for Jobs and General Queries:</h3>
+        <form action="" method="post" id="contact-form">
+			<div class="form-group">
+				<label for="name-input">Name: </label>
+				<input type="text" id="name-input" name="i-name" placeholder="John Doe" required>
+			</div>
+            <div class="form-group">
+                <label for="email-input">Email: </label>
+                <input type="email" id="email-input" name="i-email" placeholder="johndoe@website.com" required>
+            </div>
+            <input type="button" id="submit-input" value="Submit" onclick ='getInput()'>
+        </form>
+    </main>
+    <!--This links our javascript file for functionality-->
+    <script src ="js/scripts.js"></script>
+</body>
+</html>

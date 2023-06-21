@@ -1,0 +1,172 @@
+/* 
+ * Main style definitions for the timetable website.
+ * Assignment 4, CSCI 1170, Winter 2022
+ * Starter code provided by Dr. Raghav V. Sampangi
+ */
+
+ /* General body styling, body set up as a grid container */
+body {
+	width: 80vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, auto);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page banner styling, set to apper on the top row */
+.pg-banner {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+	border-bottom: 5px solid steelblue;
+}
+
+.header-container {
+	padding: 0 0.5em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Page footer styling, set to apper on the bottom row */
+.pg-footer {
+	padding: 0 0.5em;
+	grid-row: -3/-2;
+	grid-column: 1/-1;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	border-top: 1px solid gold;
+	font-size: smaller;
+}
+
+/* Navigation elements - primary (main nav in the banner), secondary (smaller nav in the banner) and footer nav. */
+.primary-nav {
+	display: flex;
+}
+
+.primary-nav > a {
+	margin: 0 0 0 1em;
+	color: steelblue;
+	text-decoration: none;
+}
+
+.primary-nav > a:hover,
+.primary-nav > a:active {
+	color: maroon;
+}
+
+.secondary-nav {
+	background-color: #707372;
+	color: white;
+	font-size: smaller;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.secondary-nav > a {
+	margin: 0.5em 1em 0.5em 0;
+	color: white;
+	text-decoration: none;
+}
+
+.secondary-nav > a:hover,
+.secondary-nav > a:active {
+	color: gold;
+}
+
+.footer-nav {
+	display: flex;
+}
+
+.footer-nav > a {
+	margin: 0 0 0 1em;
+	color: steelblue;
+	text-decoration: none;
+}
+
+.footer-nav > a:hover,
+.footer-nav > a:active {
+	color: maroon;
+}
+
+
+/* Main content container to include all the courses */
+.container {
+	margin: 10px;
+	min-height: 300px;
+
+	grid-column: 1/5;
+
+	/* Add your styles for the Main container here */
+	display:grid;	
+	/*This auto adjusts the grid column template to resize and be responsive automatically*/
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+
+/*These sections from JS are styled according to their colors and spacings provided.*/
+.container > section {
+	background-color: lightgoldenrodyellow;
+	border: 1px dashed grey;
+	height: 500px;
+	margin: 3px;
+}
+
+
+/*Changes the font-styling of the location text to match the reference provided.*/
+.location {
+	font-style: italic;
+}
+
+
+/*Changes the font-styling of the enrollment text to match the reference provided.*/
+.enroll {
+	font-style: italic;
+}
+
+
+/* Course "bag" styling */
+aside.course-selection-bag {
+	background-color: steelblue;
+	color: white;
+	/*Allows the course selection bag to extend to the end of the body by using the remaining columns*/
+	grid-column: 5/7;
+}
+
+
+/* mobile view: 840px */
+/*Media Query for mobile view to make design more responsive*/
+@media screen and (max-width: 840px) {
+
+	/*Adjusts the grid template to a minimum of 2 items in order to match the reference provided*/
+	.container {
+		grid-template-columns: repeat(2,minmax(300px, 1fr));
+		/*Lowers the grid row to make room for the selection bag*/
+		grid-row: 6/11;
+	}
+
+	/*Center aligns the header and its links in order to match the reference provided*/
+	.header-container{
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	/*Styles the selection bag to make it horizontal and appear in the center of the viewport*/
+	aside.course-selection-bag{
+		grid-row: 2/5;
+		grid-column: 1/-1;	
+		height: 500px;
+	}
+	
+	/*Styles the footer to make it center aligned along with its links*/
+	.pg-footer{
+		flex-direction: column;
+		grid-row: 12/13;
+	}
+}
+
+

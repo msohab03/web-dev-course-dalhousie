@@ -1,0 +1,195 @@
+/*This changes the entire webpage's font to arial*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color:rgb(167, 0, 167);
+    width:80vw;
+    margin:auto;
+}
+
+header#pg-banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav#primary-nav {
+	width: 20vw;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+a {
+    color: white;
+}
+
+main#pg-main-content{
+	display:flex;
+	flex-direction: column;
+}
+
+section#announcement-info{
+    text-align: center;
+    background-color: yellow;
+    color: maroon;
+    border: 5px solid maroon;
+}
+
+section#announcement-info > a {
+    color:maroon;
+}
+
+#cantina-image {
+    max-width:40vw;
+	position: relative;
+	left: 17vw;
+	border:5px solid rgb(167, 0, 167);
+}
+
+form#registration-form {
+	display: flex;
+	flex-direction: column;
+}
+
+form#registration-form > div.form-group {
+	display: flex;
+	margin: 0.5em 0;
+}
+
+form label {
+	flex: 1;
+}
+
+form input {
+	flex: 3;
+	height: 2em;
+}
+
+input#email-input{
+    margin-left:2.5px;
+}
+
+form input[type="button"] {
+	padding: 0.5em 0;
+	margin: 1em 12vw;
+	background-color: whitesmoke;
+	border: 3px solid rgb(167, 0, 167);
+	border-radius: 1px;
+}
+
+form input[type="button"]:hover {
+	background-color: pink;
+	border: 3px solid rgb(167, 0, 167);
+}
+
+section#drinks-description{
+    width:40vw;
+	padding: 10px;
+	float: left;
+	padding-right:30vw;
+}
+
+img#drinks-image {
+	width:30vw;
+}
+
+.align-image{
+	float: right;
+	position: relative;
+	top: -500px;
+	border: 5px solid rgb(167, 0, 167);
+}
+
+.mos-eisley-image{
+	position: relative;
+	left:50vw;
+	top:5vw;
+	max-width:30vw;
+	border: 5px solid rgb(167, 0, 167);
+}
+
+article#mos-eisley-articles{
+	width:40vw;
+	position: relative;
+	top:-20vw;
+}
+
+@media screen and (max-width:960px) {
+	body{
+		width: 100%;
+		background-color: white;
+		color: steelblue;
+	}
+
+	header#pg-banner,
+		main#pg-main-content,
+		nav#primary-nav{
+			flex-direction: column;
+		}
+	a {
+		color: steelblue;
+	}
+	header#pg-banner{
+		display: inline;
+		text-align: center;
+	}
+	nav#primary-nav{
+		display: inline;
+		position: relative;
+		left: 36vw;
+	}
+	main#pg-main-content{
+		padding:10px;
+	}
+
+	@media screen and (max-width:640px) {
+		header#pg-banner,body {
+			width: 100%;
+			background-color: pink;
+			color:black
+		}
+	
+		header#pg-banner,
+		main#pg-main-content,
+		nav#primary-nav{
+			flex-direction: column;
+		}
+		header#pg-banner {
+			background-color: pink;
+			color: black;
+		}
+		a {
+			color: black;
+		}
+		
+		.mos-eisley-image{
+			left: 0px;
+			top: 0px;
+		}
+		article#mos-eisley-articles{
+			top:30px;
+		}
+		section#drinks-description{
+			position: relative;
+			top: 20vw;
+		}
+		.align-image{
+			top: -190vw;
+			right: 60vw;
+		}
+		main#pg-main-content{
+			padding-left: 10px;
+		}
+		h1#logo {
+			text-align: center;
+		}
+		
+		header#pg-banner,nav#primary-nav{
+			justify-content: center;
+		}
+		nav#primary-nav{
+			display: flex;
+			align-items: center;
+		}
+	}
+}

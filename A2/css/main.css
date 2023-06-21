@@ -1,0 +1,111 @@
+/*This changes the entire webpage's font to arial*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Heading with padding for spacing*/
+h1 {
+    padding-bottom: 20px;
+}
+/*These are the navigation links with their boder underline*/
+#primary-nav{
+    width: 100%;
+    padding-right: 30%;
+    padding-bottom: 1.5em;
+    border-bottom: 6px solid rgb(67, 131, 204);
+}
+
+#primary-nav a{
+    padding-right: 20px;
+    /*
+    Referred to GeeksforGeeks to remove underlines from anchor tags
+    Author: Pranchal Katiyar
+    URL: https://www.geeksforgeeks.org/how-to-remove-underline-for-anchors-tag-using-css/
+    Date Accessed: 19 Feb 2022
+    */
+    text-decoration: none;
+}
+/*This creates a maroon hovering effect when the cursor is brought on top of the link.*/
+#primary-nav a:hover{
+    /*Referred to W3Schools to learn how to implement hover links.
+    Author: W3Schools
+    URL: https://www.w3schools.com/css/css_link.asp
+    Date Accessed: 19 Feb 2022
+    */
+    color: white;
+    background-color: maroon;
+    padding: 20px;
+}
+/*Aligns the links to the center of the viewport.*/
+#tiger-people ul{
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 40px;
+    width:600px;
+    list-style: none;
+    text-align: center;
+    border-bottom: 6px solid rgb(67, 131, 204);
+}
+
+#tiger-people li{
+    float: left;
+    padding-left: 1em;
+}
+
+#tiger-people a{
+    text-align: center;
+}
+
+#pg-main-content{
+    clear: both;
+    overflow: auto;
+}
+
+#highlights {
+    width: 70%;
+    float: left;
+    clear: both;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+/*Aligned the covid 19 summary to the right of the same block by splitting it 70-30*/
+#covid-summary {
+    width: 30%;
+    float: right;
+    overflow: auto;
+}
+
+#featured-articles{
+    float: left;
+    margin-bottom: 20px;
+}
+/*Adjusts the background color of the articles and aligns them in a horizontal row*/
+.art-summary {
+    background-color: rgb(255, 227, 191);
+    width: 23%;
+    margin-left: 10px;
+    float: left;
+    padding-left: 1em;
+}
+
+#about-info{
+    float: left;
+    margin-bottom: 40px;
+}
+/*Establishes page footer with a margin of extension.*/
+#pg-footer{
+    background-color: black;
+    color: white;
+    padding-bottom: 3em;
+    padding-top: 1em;
+    padding-left: 5px;
+}
+/*Adjusts image in article to fit in the left while the text is placed on the right with some padding.*/
+.article-featured-img {
+    float: left;
+    width: 300px;
+    padding-right: 20px;
+}
+/*Adds some padding after the article texts.*/
+#main-article{
+    margin-bottom: 200px;
+}
