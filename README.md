@@ -1,2 +1,2 @@
 # web-dev-course-dalhousie
-A intro to web dev course I took at Dalhousie 👨‍💻
+An intro to web dev course I took at Dalhousie 👨‍💻
